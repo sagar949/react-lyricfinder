@@ -14,16 +14,6 @@ export class Provider extends Component {
       process.env.REACT_APP_MM_APP_KEY
     }`;
     const bypassCorsUrl = `https://cors-anywhere.herokuapp.com`;
-    // return axios(url, {
-    //     method: 'GET',
-    //     mode: 'no-cors',
-    //     headers: {
-    //       'Access-Control-Allow-Origin': '*',
-    //       'Content-Type': 'application/json',
-    //     },
-    //     withCredentials: true,
-    //     credentials: 'same-origin',
-    //   })
     axios
       .get(`${bypassCorsUrl}/${url}`)
       .then(res => {
